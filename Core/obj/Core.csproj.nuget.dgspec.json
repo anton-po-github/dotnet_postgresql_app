@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dotnet\\Core\\Core.csproj": {}
+    "C:\\DOTNET\\dotnet_postgresql\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\dotnet\\Core\\Core.csproj": {
+    "C:\\DOTNET\\dotnet_postgresql\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dotnet\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\DOTNET\\dotnet_postgresql\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\dotnet\\Core\\Core.csproj",
+        "projectPath": "C:\\DOTNET\\dotnet_postgresql\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\dotnet\\Core\\obj\\",
+        "outputPath": "C:\\DOTNET\\dotnet_postgresql\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

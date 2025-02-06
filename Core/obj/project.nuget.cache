@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bPDmYgErN/g=",
+  "dgSpecHash": "x5uK05A6NUY=",
   "success": true,
-  "projectFilePath": "C:\\dotnet\\Core\\Core.csproj",
+  "projectFilePath": "C:\\DOTNET\\dotnet_postgresql\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.1\\microsoft.aspnetcore.cryptography.internal.9.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\9.0.1\\microsoft.aspnetcore.cryptography.keyderivation.9.0.1.nupkg.sha512",

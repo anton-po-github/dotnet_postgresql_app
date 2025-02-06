@@ -797,11 +797,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\dotnet\\Core\\Core.csproj",
+      "projectUniqueName": "c:\\DOTNET\\dotnet_postgresql\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "c:\\dotnet\\Core\\Core.csproj",
+      "projectPath": "c:\\DOTNET\\dotnet_postgresql\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "c:\\dotnet\\Core\\obj\\",
+      "outputPath": "c:\\DOTNET\\dotnet_postgresql\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

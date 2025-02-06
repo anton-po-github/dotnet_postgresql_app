@@ -1310,11 +1310,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dotnet\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\DOTNET\\dotnet_postgresql\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\dotnet\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\DOTNET\\dotnet_postgresql\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\dotnet\\Infrastructure\\obj\\",
+      "outputPath": "C:\\DOTNET\\dotnet_postgresql\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1329,8 +1329,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\dotnet\\Core\\Core.csproj": {
-              "projectPath": "C:\\dotnet\\Core\\Core.csproj"
+            "C:\\DOTNET\\dotnet_postgresql\\Core\\Core.csproj": {
+              "projectPath": "C:\\DOTNET\\dotnet_postgresql\\Core\\Core.csproj"
             }
           }
         }

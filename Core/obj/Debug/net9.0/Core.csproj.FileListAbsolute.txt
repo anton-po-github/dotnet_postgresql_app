@@ -22,6 +22,19 @@ C:\dotnet\Core\obj\Debug\net9.0\Core.dll
 C:\dotnet\Core\obj\Debug\net9.0\refint\Core.dll
 C:\dotnet\Core\obj\Debug\net9.0\Core.pdb
 C:\dotnet\Core\obj\Debug\net9.0\ref\Core.dll
+C:\DOTNET\skinet\Core\obj\Debug\net9.0\Core.sourcelink.json
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\bin\Debug\net9.0\Core.deps.json
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\bin\Debug\net9.0\Core.dll
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\bin\Debug\net9.0\Core.pdb
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\obj\Debug\net9.0\Core.dll
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\obj\Debug\net9.0\refint\Core.dll
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\obj\Debug\net9.0\Core.pdb
+C:\Users\user\Desktop\Новая папка (3)\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\dotnet_postgresql-decc28064c17e3a547861cc1eab716851b335449\skinet\Core\obj\Debug\net9.0\ref\Core.dll
 C:\DOTNET\dotnet_postgresql\Core\bin\Debug\net9.0\Core.deps.json
 C:\DOTNET\dotnet_postgresql\Core\bin\Debug\net9.0\Core.dll
 C:\DOTNET\dotnet_postgresql\Core\bin\Debug\net9.0\Core.pdb

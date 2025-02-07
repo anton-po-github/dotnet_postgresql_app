@@ -26,12 +26,14 @@ app.MapControllers();
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
 var context = services.GetRequiredService<StoreContext>();
+var loggerFactory = services.GetRequiredService<ILoggerFactory>();
 //var identityContext = services.GetRequiredService<AppIdentityDbContext>();
 //var userManager = services.GetRequiredService<UserManager<AppUser>>();
 var logger = services.GetRequiredService<ILogger<Program>>();
 try
 {
     await context.Database.MigrateAsync();
+    await StoreContextSeed.SeedAsync(context, loggerFactory);
     //   await identityContext.Database.MigrateAsync();
     //  await StoreContextSeed.SeedAsync(context);
     //  await AppIdentityDbContextSeed.SeedUsersAsync(userManager);

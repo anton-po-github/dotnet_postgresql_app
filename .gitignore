@@ -1,11 +1,6 @@
-API/bin/*
-API/obj/*
-
-Core/bin/*
-Core/obj/*
-
-Infrastructure/bin/*
-Infrastructure/obj/*
+.*bin
+.*obj
+!/.gitignore
 
 appsettings.json
 *.db

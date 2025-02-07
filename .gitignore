@@ -1,6 +1,5 @@
-.*bin
-.*obj
-!/.gitignore
+bin/
+obj/
 
 appsettings.json
 *.db

@@ -1,4 +1,11 @@
-**/obj
-**/bin
+API/bin/*
+API/obj/*
+
+Core/bin/*
+Core/obj/*
+
+Infrastructure/bin/*
+Infrastructure/obj/*
+
 appsettings.json
 *.db

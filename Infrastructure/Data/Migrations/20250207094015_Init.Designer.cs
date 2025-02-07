@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20250206194725_Init")]
+    [Migration("20250207094015_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -77,9 +77,6 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("MyProperty")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("MyProperty2")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")

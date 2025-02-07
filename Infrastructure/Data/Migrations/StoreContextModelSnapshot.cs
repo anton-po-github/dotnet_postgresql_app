@@ -76,9 +76,6 @@ namespace Infrastructure.Data.Migrations
                     b.Property<int>("MyProperty")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("MyProperty2")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 

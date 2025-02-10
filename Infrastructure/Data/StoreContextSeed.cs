@@ -16,14 +16,10 @@ namespace Infrastructure.Data
 
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            Console.WriteLine(path);
-
             if (!context.Products.Any())
             {
                 //  var productsData = File.ReadAllText(path + @"/Data/SeedData/products.json");
                 var productsData = File.ReadAllText("../../../../DOTNET/dotnet_postgresql/Infrastructure/Data/SeedData/products.json");
-
-                //Console.WriteLine(productsData);
 
                 var products = JsonSerializer.Deserialize<List<Product>>(productsData);
                 context.Products.AddRange(products);

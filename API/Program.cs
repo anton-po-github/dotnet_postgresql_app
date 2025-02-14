@@ -10,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddApplicationServices();
+
 builder.Services.AddAutoMapper(typeof(MappingProfiles));
 
 builder.Services.AddDbContext<StoreContext>(x =>
@@ -17,7 +19,6 @@ builder.Services.AddDbContext<StoreContext>(x =>
     x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.AddApplicationServices();
 builder.Services.AddSwaggerDoc();
 
 var app = builder.Build();
@@ -26,15 +27,25 @@ app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
+app.UseSwaggerDoc();
+
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
+app.UseCors("CorsPolicy");
+
+/* app.UseCors(builder =>
+builder.WithOrigins("https://localhost:4200")
+.AllowAnyHeader()
+.AllowCredentials()
+.AllowAnyMethod()); */
+
+app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseSwaggerDoc();
-
 app.MapControllers();
+//app.MapFallbackToController("Index", "Fallback");
 
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;

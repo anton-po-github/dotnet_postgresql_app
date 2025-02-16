@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Basket, BasketItem, BasketTotals } from '../shared/models/basket';
+import { Basket, BasketItem, BasketTotals, IBasket } from '../shared/models/basket';
 import { DeliveryMethod } from '../shared/models/deliveryMethod';
 import { Product } from '../shared/models/product';
 
@@ -11,7 +11,7 @@ import { Product } from '../shared/models/product';
 })
 export class BasketService {
   baseUrl = environment.apiUrl;
-  private basketSource = new BehaviorSubject<Basket | null>(null);
+  private basketSource = new BehaviorSubject<IBasket | null>(null);
   basketSource$ = this.basketSource.asObservable();
   private basketTotalSource = new BehaviorSubject<BasketTotals | null>(null);
   basketTotalSource$ = this.basketTotalSource.asObservable();

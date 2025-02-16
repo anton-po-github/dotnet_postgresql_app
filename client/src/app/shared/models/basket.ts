@@ -10,7 +10,7 @@ export interface BasketItem {
     type: string;
 }
 
-export interface Basket {
+export interface IBasket {
     id: string;
     items: BasketItem[];
     clientSecret?: string;
@@ -19,7 +19,7 @@ export interface Basket {
     shippingPrice: number;
 }
 
-export class Basket implements Basket {
+export class Basket implements IBasket {
     id = cuid();
     items: BasketItem[] = [];
     shippingPrice = 0;

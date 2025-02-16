@@ -1,5 +1,4 @@
 using API.Extensions;
-using API.Helpers;
 using API.Middleware;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -10,16 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddApplicationServices();
-
-builder.Services.AddAutoMapper(typeof(MappingProfiles));
-
-builder.Services.AddDbContext<StoreContext>(x =>
-{
-    x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-
-builder.Services.AddSwaggerDoc();
+builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
 

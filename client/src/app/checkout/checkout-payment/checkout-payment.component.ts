@@ -5,7 +5,7 @@ import { loadStripe, Stripe, StripeCardCvcElement, StripeCardExpiryElement, Stri
 import { ToastrService } from 'ngx-toastr';
 import { firstValueFrom } from 'rxjs';
 import { BasketService } from 'src/app/basket/basket.service';
-import { Basket } from 'src/app/shared/models/basket';
+import { Basket, IBasket } from 'src/app/shared/models/basket';
 import { OrderToCreate } from 'src/app/shared/models/order';
 import { Address } from 'src/app/shared/models/user';
 import { CheckoutService } from '../checkout.service';
@@ -94,7 +94,7 @@ export class CheckoutPaymentComponent implements OnInit {
     }
   }
 
-  private async confirmPaymentWithStripe(basket: Basket | null) {
+  private async confirmPaymentWithStripe(basket: IBasket | null) {
     if (!basket) throw new Error('Basket is null');
     const result = this.stripe?.confirmCardPayment(basket.clientSecret!, {
       payment_method: {
@@ -108,13 +108,13 @@ export class CheckoutPaymentComponent implements OnInit {
     return result;
   }
 
-  private async createOrder(basket: Basket | null) {
+  private async createOrder(basket: IBasket | null) {
     if (!basket) throw new Error('Basket is null');
     const orderToCreate = this.getOrderToCreate(basket);
     return firstValueFrom(this.checkoutService.createOrder(orderToCreate));
   }
 
-  private getOrderToCreate(basket: Basket): OrderToCreate {
+  private getOrderToCreate(basket: IBasket): OrderToCreate {
     const deliveryMethodId = this.checkoutForm?.get('deliveryForm')?.get('deliveryMethod')?.value;
     const shipToAddress = this.checkoutForm?.get('addressForm')?.value as Address;
     if (!deliveryMethodId || !shipToAddress) throw new Error('Problem with basket');

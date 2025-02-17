@@ -9,8 +9,8 @@ namespace Infrastructure.Data
         {
         }
 
-        public DbSet<Product> Products { get; set; }
-        public DbSet<ProductBrand> ProductBrands { get; set; }
-        public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<Product> products { get; set; }
+        public DbSet<ProductBrand> product_brands { get; set; }
+        public DbSet<ProductType> product_types { get; set; }
     }
 }

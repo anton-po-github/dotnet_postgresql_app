@@ -55,7 +55,7 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasIndex("ProductTypeId");
 
-                    b.ToTable("Products");
+                    b.ToTable("products");
                 });
 
             modelBuilder.Entity("Core.Entities.ProductBrand", b =>
@@ -71,7 +71,7 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductBrands");
+                    b.ToTable("product_brands");
                 });
 
             modelBuilder.Entity("Core.Entities.ProductType", b =>
@@ -90,7 +90,7 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductTypes");
+                    b.ToTable("product_types");
                 });
 
             modelBuilder.Entity("Core.Entities.Product", b =>

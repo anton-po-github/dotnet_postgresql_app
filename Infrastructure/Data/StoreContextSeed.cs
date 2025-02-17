@@ -12,29 +12,29 @@ namespace Infrastructure.Data
 
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            if (!context.Products.Any())
+            if (!context.products.Any())
             {
                 //  var productsData = File.ReadAllText(path + @"/Data/SeedData/products.json");
                 var productsData = File.ReadAllText("../../../../DOT_NET/dotnet_postgresql/Infrastructure/Data/SeedData/products.json");
 
                 var products = JsonSerializer.Deserialize<List<Product>>(productsData);
-                context.Products.AddRange(products);
+                context.products.AddRange(products);
             }
 
-            if (!context.ProductBrands.Any())
+            if (!context.product_brands.Any())
             {
                 //  var brandsData = File.ReadAllText(path + @"/Data/SeedData/brands.json");
                 var brandsData = File.ReadAllText("../../../../DOT_NET/dotnet_postgresql/Infrastructure/Data/SeedData/brands.json");
                 var brands = JsonSerializer.Deserialize<List<ProductBrand>>(brandsData);
-                context.ProductBrands.AddRange(brands);
+                context.product_brands.AddRange(brands);
             }
 
-            if (!context.ProductTypes.Any())
+            if (!context.product_types.Any())
             {
                 // var typesData = File.ReadAllText(path + @"/Data/SeedData/types.json");
                 var typesData = File.ReadAllText("../../../../DOT_NET/dotnet_postgresql/Infrastructure/Data/SeedData/types.json");
                 var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
-                context.ProductTypes.AddRange(types);
+                context.product_types.AddRange(types);
             }
 
             if (context.ChangeTracker.HasChanges()) await context.SaveChangesAsync();

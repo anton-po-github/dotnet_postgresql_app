@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20250217120342_Init")]
+    [Migration("20250217165839_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -58,7 +58,7 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasIndex("ProductTypeId");
 
-                    b.ToTable("Products");
+                    b.ToTable("products");
                 });
 
             modelBuilder.Entity("Core.Entities.ProductBrand", b =>
@@ -74,7 +74,7 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductBrands");
+                    b.ToTable("product_brands");
                 });
 
             modelBuilder.Entity("Core.Entities.ProductType", b =>
@@ -93,7 +93,7 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductTypes");
+                    b.ToTable("product_types");
                 });
 
             modelBuilder.Entity("Core.Entities.Product", b =>

@@ -5,6 +5,7 @@ using Infrastructure.Data;
 using Infrastructure.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using StackExchange.Redis;
 
 namespace API.Extensions
@@ -15,12 +16,15 @@ namespace API.Extensions
         {
             services.AddDbContext<StoreContext>(opt =>
             {
-                opt.UseNpgsql(config.GetConnectionString("DefaultConnection"));
+                opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
+
             services.AddDbContext<AppIdentityDbContext>(x =>
             {
-                x.UseNpgsql(config.GetConnectionString("IdentityConnection"));
+                x.UseSqlite(config.GetConnectionString("IdentityConnection"));
             });
+
+            services.AddTransient<MySqlConnection>(x => new MySqlConnection(config.GetConnectionString("MySQLConnection")));
 
             services.AddSingleton<IConnectionMultiplexer>(c =>
             {

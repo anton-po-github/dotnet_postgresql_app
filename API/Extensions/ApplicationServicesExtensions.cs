@@ -3,9 +3,9 @@ using API.Helpers;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Identity;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MySqlConnector;
 using StackExchange.Redis;
 
 namespace API.Extensions
@@ -24,13 +24,13 @@ namespace API.Extensions
                 x.UseSqlite(config.GetConnectionString("IdentityConnection"));
             });
 
-            services.AddTransient<MySqlConnection>(x => new MySqlConnection(config.GetConnectionString("MySQLConnection")));
-
             services.AddSingleton<IConnectionMultiplexer>(c =>
             {
                 var options = ConfigurationOptions.Parse(config.GetConnectionString("Redis"));
                 return ConnectionMultiplexer.Connect(options);
             });
+
+            services.AddScoped<ITokenService, TokenService>();
 
             services.AddScoped<IProductRepository, ProductRepository>();
 

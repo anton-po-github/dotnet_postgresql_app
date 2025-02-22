@@ -10,10 +10,12 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+var services = builder.Services;
 
-builder.Services.AddApplicationServices(builder.Configuration);
-builder.Services.AddIdentityServices();
+services.AddControllers();
+
+services.AddApplicationServices(builder.Configuration);
+services.AddIdentityServices(builder.Configuration);
 
 var app = builder.Build();
 
@@ -42,12 +44,12 @@ app.MapControllers();
 //app.MapFallbackToController("Index", "Fallback");
 
 using var scope = app.Services.CreateScope();
-var services = scope.ServiceProvider;
-var context = services.GetRequiredService<StoreContext>();
-var loggerFactory = services.GetRequiredService<ILoggerFactory>();
-var identityContext = services.GetRequiredService<AppIdentityDbContext>();
-var userManager = services.GetRequiredService<UserManager<AppUser>>();
-var logger = services.GetRequiredService<ILogger<Program>>();
+var serviceProvider = scope.ServiceProvider;
+var context = serviceProvider.GetRequiredService<StoreContext>();
+var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
+var identityContext = serviceProvider.GetRequiredService<AppIdentityDbContext>();
+var userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
+var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
 try
 {
     await context.Database.MigrateAsync();

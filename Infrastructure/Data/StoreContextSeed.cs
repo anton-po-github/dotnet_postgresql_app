@@ -1,6 +1,7 @@
 using System.Reflection;
 using System.Text.Json;
 using Core.Entities;
+using Core.Entities.OrderAggregate;
 using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Data
@@ -10,7 +11,7 @@ namespace Infrastructure.Data
         public static async Task SeedAsync(StoreContext context, ILoggerFactory loggerFactory)
         {
 
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            // var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
             if (!context.products.Any())
             {
@@ -35,6 +36,13 @@ namespace Infrastructure.Data
                 var typesData = File.ReadAllText("../../../../DOT_NET/dotnet_postgresql/Infrastructure/Data/SeedData/types.json");
                 var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
                 context.product_types.AddRange(types);
+            }
+
+            if (!context.delivery_method.Any())
+            {
+                var deliveryData = File.ReadAllText("../../../../DOT_NET/dotnet_postgresql/Infrastructure/Data/SeedData/delivery.json");
+                var methods = JsonSerializer.Deserialize<List<DeliveryMethod>>(deliveryData);
+                context.delivery_method.AddRange(methods);
             }
 
             if (context.ChangeTracker.HasChanges()) await context.SaveChangesAsync();

@@ -41,7 +41,7 @@ export class ProductDetailsComponent implements OnInit {
           }
         })
       },
-      error: error => console.log(error)
+      error: error => console.error(error)
     })
   }
 

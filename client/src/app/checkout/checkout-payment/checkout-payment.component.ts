@@ -34,7 +34,7 @@ export class CheckoutPaymentComponent implements OnInit {
       private toastr: ToastrService, private router: Router) {}
 
   ngOnInit(): void {
-    loadStripe('pk_test_2PZ84pFKu2MddUgGDG521v9m00SlLWySIR').then(stripe => {
+    loadStripe('pk_test_51QwhcVDAsA62KZsDrOsgVdsNDWS6UcGvBHNwOKmXImtRlmChrIQMNSSiapSjaKwQSpI8ICzoEsuAr4kyhGeywlAs007VfvgcmT').then(stripe => {
       this.stripe = stripe;
       const elements = stripe?.elements();
       if (elements) {
@@ -87,7 +87,7 @@ export class CheckoutPaymentComponent implements OnInit {
         this.toastr.error(paymentResult.error.message);
       }
     } catch (error: any) {
-      console.log(error);
+      console.error(error);
       this.toastr.error(error.message)
     } finally {
       this.loading = false;

@@ -44,9 +44,6 @@ export class ShopService {
 
       return this.http.get<Pagination<Product[]>>(this.baseUrl + 'products', {params}).pipe(
       map(response => {
-
-        console.log(response);
-
         this.productCache.set(Object.values(this.shopParams).join('-'), response)
         this.pagination = response;
         return response;

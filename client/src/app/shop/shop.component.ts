@@ -39,21 +39,21 @@ export class ShopComponent implements OnInit {
         this.products = response.data;
         this.totalCount = response.count;
       },
-      error: error => console.log(error)
+      error: error => console.error(error)
     })
   }
 
   getBrands() {
     this.shopService.getBrands().subscribe({
       next: response => this.brands = [{id: 0, name: 'All'}, ...response],
-      error: error => console.log(error)
+      error: error => console.error(error)
     })
   }
 
   getTypes() {
     this.shopService.getTypes().subscribe({
       next: response => this.types = [{id: 0, name: 'All'}, ...response],
-      error: error => console.log(error)
+      error: error => console.error(error)
     })
   }
 

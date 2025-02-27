@@ -16,21 +16,21 @@ export class TestErrorComponent {
   get404Error() {
     this.http.get(this.baseUrl + 'products/42').subscribe({
       next: response => console.log(response),
-      error: error => console.log(error)
+      error: error => console.error(error)
     })
   }
 
   get500Error() {
     this.http.get(this.baseUrl + 'buggy/servererror').subscribe({
       next: response => console.log(response),
-      error: error => console.log(error)
+      error: error => console.error(error)
     })
   }
 
   get400Error() {
     this.http.get(this.baseUrl + 'buggy/badrequest').subscribe({
       next: response => console.log(response),
-      error: error => console.log(error)
+      error: error => console.error(error)
     })
   }
 
@@ -38,7 +38,7 @@ export class TestErrorComponent {
     this.http.get(this.baseUrl + 'products/fortytwo').subscribe({
       next: response => console.log(response),
       error: error => {
-        console.log(error);
+        console.error(error);
         this.validationErrors = error.errors;
       }
     })

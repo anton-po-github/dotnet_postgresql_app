@@ -36,6 +36,8 @@ namespace API.Extensions
 
             services.AddScoped<IOrderService, OrderService>();
 
+            services.AddScoped<IPaymentService, PaymentService>();
+
             services.AddScoped<IProductRepository, ProductRepository>();
 
             services.AddScoped<IBasketRepository, BasketRepository>();
@@ -69,6 +71,7 @@ namespace API.Extensions
                 opt.AddPolicy("CorsPolicy", policy =>
                 {
                     policy.WithOrigins("https://localhost:4200").AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod().AllowAnyOrigin();
+                    policy.WithOrigins("https://r.stripe.com").AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod().AllowAnyOrigin();
                 });
             });
 

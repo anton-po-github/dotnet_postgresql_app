@@ -11,12 +11,12 @@ namespace Infrastructure.Data
         {
         }
 
-        public DbSet<Product> products { get; set; }
-        public DbSet<ProductBrand> product_brands { get; set; }
-        public DbSet<ProductType> product_types { get; set; }
-        public DbSet<Order> order { get; set; }
-        public DbSet<OrderItem> order_items { get; set; }
-        public DbSet<DeliveryMethod> delivery_method { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductBrand> ProductBrands { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<DeliveryMethod> DeliveryMethod { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

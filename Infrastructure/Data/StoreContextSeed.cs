@@ -13,36 +13,36 @@ namespace Infrastructure.Data
 
             // var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            if (!context.products.Any())
+            if (!context.Products.Any())
             {
                 //  var productsData = File.ReadAllText(path + @"/Data/SeedData/products.json");
                 var productsData = File.ReadAllText("../../../../DOT_NET/dotnet_postgresql/Infrastructure/Data/SeedData/products.json");
 
                 var products = JsonSerializer.Deserialize<List<Product>>(productsData);
-                context.products.AddRange(products);
+                context.Products.AddRange(products);
             }
 
-            if (!context.product_brands.Any())
+            if (!context.ProductBrands.Any())
             {
                 //  var brandsData = File.ReadAllText(path + @"/Data/SeedData/brands.json");
                 var brandsData = File.ReadAllText("../../../../DOT_NET/dotnet_postgresql/Infrastructure/Data/SeedData/brands.json");
                 var brands = JsonSerializer.Deserialize<List<ProductBrand>>(brandsData);
-                context.product_brands.AddRange(brands);
+                context.ProductBrands.AddRange(brands);
             }
 
-            if (!context.product_types.Any())
+            if (!context.ProductTypes.Any())
             {
                 // var typesData = File.ReadAllText(path + @"/Data/SeedData/types.json");
                 var typesData = File.ReadAllText("../../../../DOT_NET/dotnet_postgresql/Infrastructure/Data/SeedData/types.json");
                 var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
-                context.product_types.AddRange(types);
+                context.ProductTypes.AddRange(types);
             }
 
-            if (!context.delivery_method.Any())
+            if (!context.DeliveryMethod.Any())
             {
                 var deliveryData = File.ReadAllText("../../../../DOT_NET/dotnet_postgresql/Infrastructure/Data/SeedData/delivery.json");
                 var methods = JsonSerializer.Deserialize<List<DeliveryMethod>>(deliveryData);
-                context.delivery_method.AddRange(methods);
+                context.DeliveryMethod.AddRange(methods);
             }
 
             if (context.ChangeTracker.HasChanges()) await context.SaveChangesAsync();

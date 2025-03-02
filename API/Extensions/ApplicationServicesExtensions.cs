@@ -16,12 +16,12 @@ namespace API.Extensions
         {
             services.AddDbContext<StoreContext>(opt =>
             {
-                opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
+                opt.UseNpgsql(config.GetConnectionString("DefaultConnection"));
             });
 
             services.AddDbContext<AppIdentityDbContext>(x =>
             {
-                x.UseSqlite(config.GetConnectionString("IdentityConnection"));
+                x.UseNpgsql(config.GetConnectionString("IdentityConnection"));
             });
 
             services.AddSingleton<IConnectionMultiplexer>(c =>
